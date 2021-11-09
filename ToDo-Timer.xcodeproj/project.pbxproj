@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF7E27247B24007BB013 /* AppDelegate.swift */; };
 		CC77DF8127247B24007BB013 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF8027247B24007BB013 /* SceneDelegate.swift */; };
-		CC77DF8327247B24007BB013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF8227247B24007BB013 /* ViewController.swift */; };
+		CC77DF8327247B24007BB013 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF8227247B24007BB013 /* ToDoListViewController.swift */; };
 		CC77DF8627247B24007BB013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC77DF8427247B24007BB013 /* Main.storyboard */; };
 		CC77DF8827247B25007BB013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC77DF8727247B25007BB013 /* Assets.xcassets */; };
 		CC77DF8B27247B25007BB013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC77DF8927247B25007BB013 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		CC77DF7B27247B24007BB013 /* ToDo-Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC77DF7E27247B24007BB013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC77DF8027247B24007BB013 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC77DF8227247B24007BB013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC77DF8227247B24007BB013 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		CC77DF8527247B24007BB013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC77DF8727247B25007BB013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC77DF8A27247B25007BB013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,13 +58,29 @@
 			children = (
 				CC77DF7E27247B24007BB013 /* AppDelegate.swift */,
 				CC77DF8027247B24007BB013 /* SceneDelegate.swift */,
-				CC77DF8227247B24007BB013 /* ViewController.swift */,
-				CC77DF8427247B24007BB013 /* Main.storyboard */,
+				CC813149273AF64D00638121 /* Controller */,
+				CC81314A273AF65500638121 /* View */,
 				CC77DF8727247B25007BB013 /* Assets.xcassets */,
-				CC77DF8927247B25007BB013 /* LaunchScreen.storyboard */,
 				CC77DF8C27247B25007BB013 /* Info.plist */,
 			);
 			path = "ToDo-Timer";
+			sourceTree = "<group>";
+		};
+		CC813149273AF64D00638121 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC77DF8227247B24007BB013 /* ToDoListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC81314A273AF65500638121 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC77DF8427247B24007BB013 /* Main.storyboard */,
+				CC77DF8927247B25007BB013 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC77DF8327247B24007BB013 /* ViewController.swift in Sources */,
+				CC77DF8327247B24007BB013 /* ToDoListViewController.swift in Sources */,
 				CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */,
 				CC77DF8127247B24007BB013 /* SceneDelegate.swift in Sources */,
 			);
