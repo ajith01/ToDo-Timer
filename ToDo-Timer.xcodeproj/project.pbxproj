@@ -13,6 +13,7 @@
 		CC77DF8627247B24007BB013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC77DF8427247B24007BB013 /* Main.storyboard */; };
 		CC77DF8827247B25007BB013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC77DF8727247B25007BB013 /* Assets.xcassets */; };
 		CC77DF8B27247B25007BB013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC77DF8927247B25007BB013 /* LaunchScreen.storyboard */; };
+		CC8CEF05273CBAC30066C125 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CC77DF8727247B25007BB013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC77DF8A27247B25007BB013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC77DF8C27247B25007BB013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				CC77DF8227247B24007BB013 /* ToDoListViewController.swift */,
+				CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC77DF8327247B24007BB013 /* ToDoListViewController.swift in Sources */,
+				CC8CEF05273CBAC30066C125 /* AddItemViewController.swift in Sources */,
 				CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */,
 				CC77DF8127247B24007BB013 /* SceneDelegate.swift in Sources */,
 			);
