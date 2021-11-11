@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="aUd-cU-VVu"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" name="DarkDayNight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setting" id="a9W-Uj-RoE"/>
                 </viewController>
@@ -145,43 +145,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-lS-4gp">
-                                <rect key="frame" x="129" y="107" width="245" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-lS-4gp">
+                                <rect key="frame" x="150" y="88" width="239" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qic-jS-YEF">
-                                <rect key="frame" x="20" y="114" width="84" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qic-jS-YEF">
+                                <rect key="frame" x="25" y="93" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="nMx-UR-k00"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="lvI-vE-yZj">
-                                <rect key="frame" x="97.912043301722775" y="185" width="731.62652232757034" height="234"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="lvI-vE-yZj">
+                                <rect key="frame" x="105" y="147" width="284" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="ukP-d4-b5h"/>
+                                </constraints>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="631191600">
                                     <!--2021-01-01 11:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awK-mT-4IS">
-                                <rect key="frame" x="20" y="185" width="36" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awK-mT-4IS">
+                                <rect key="frame" x="25" y="139" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Importance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l6-NZ-2w8">
-                                <rect key="frame" x="18" y="252" width="88" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Importance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l6-NZ-2w8">
+                                <rect key="frame" x="25" y="205" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MLd-EQ-JM2">
-                                <rect key="frame" x="145" y="247" width="237" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MLd-EQ-JM2">
+                                <rect key="frame" x="214" y="203" width="175" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="Lvj-zd-IZI"/>
+                                </constraints>
                                 <segments>
                                     <segment title="1"/>
                                     <segment title="2"/>
@@ -189,21 +192,38 @@
                                     <segment title="4"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSm-Df-d9V">
-                                <rect key="frame" x="321" y="821" width="56" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Eg-ty-iKf">
+                                <rect key="frame" x="25" y="767" width="68.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSm-Df-d9V">
+                                <rect key="frame" x="333" y="767" width="56" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Eg-ty-iKf">
-                                <rect key="frame" x="29" y="821" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fIn-hf-Gaq"/>
                         <color key="backgroundColor" name="DarkDayNight"/>
+                        <constraints>
+                            <constraint firstItem="lvI-vE-yZj" firstAttribute="top" secondItem="BHX-lS-4gp" secondAttribute="bottom" constant="25" id="487-7T-niJ"/>
+                            <constraint firstItem="2Eg-ty-iKf" firstAttribute="leading" secondItem="fIn-hf-Gaq" secondAttribute="leading" constant="25" id="8CU-mE-MiC"/>
+                            <constraint firstItem="6l6-NZ-2w8" firstAttribute="leading" secondItem="fIn-hf-Gaq" secondAttribute="leading" constant="25" id="AMV-Na-ydN"/>
+                            <constraint firstItem="fIn-hf-Gaq" firstAttribute="trailing" secondItem="CSm-Df-d9V" secondAttribute="trailing" constant="25" id="IlY-rl-rc5"/>
+                            <constraint firstItem="BHX-lS-4gp" firstAttribute="leading" secondItem="Qic-jS-YEF" secondAttribute="trailing" constant="25" id="PCG-x4-QVi"/>
+                            <constraint firstItem="6l6-NZ-2w8" firstAttribute="top" secondItem="awK-mT-4IS" secondAttribute="bottom" constant="45" id="UA1-Tx-Hiq"/>
+                            <constraint firstItem="awK-mT-4IS" firstAttribute="leading" secondItem="fIn-hf-Gaq" secondAttribute="leading" constant="25" id="UmF-An-RYv"/>
+                            <constraint firstItem="Qic-jS-YEF" firstAttribute="leading" secondItem="fIn-hf-Gaq" secondAttribute="leading" constant="25" id="VDf-JZ-b6g"/>
+                            <constraint firstItem="fIn-hf-Gaq" firstAttribute="trailing" secondItem="MLd-EQ-JM2" secondAttribute="trailing" constant="25" id="XH0-Rz-pjj"/>
+                            <constraint firstItem="fIn-hf-Gaq" firstAttribute="trailing" secondItem="BHX-lS-4gp" secondAttribute="trailing" constant="25" id="YAo-Da-CmP"/>
+                            <constraint firstItem="fIn-hf-Gaq" firstAttribute="trailing" secondItem="lvI-vE-yZj" secondAttribute="trailing" constant="25" id="jZF-Uf-wLM"/>
+                            <constraint firstItem="MLd-EQ-JM2" firstAttribute="top" secondItem="lvI-vE-yZj" secondAttribute="bottom" constant="25" id="nfL-lP-8E3"/>
+                            <constraint firstItem="fIn-hf-Gaq" firstAttribute="bottom" secondItem="CSm-Df-d9V" secondAttribute="bottom" constant="15" id="t82-8f-dE5"/>
+                            <constraint firstItem="BHX-lS-4gp" firstAttribute="top" secondItem="fIn-hf-Gaq" secondAttribute="top" id="tul-gS-GHh"/>
+                            <constraint firstItem="fIn-hf-Gaq" firstAttribute="bottom" secondItem="2Eg-ty-iKf" secondAttribute="bottom" constant="15" id="vEf-4y-ain"/>
+                            <constraint firstItem="Qic-jS-YEF" firstAttribute="top" secondItem="fIn-hf-Gaq" secondAttribute="top" constant="5" id="vhy-JT-HID"/>
+                            <constraint firstItem="awK-mT-4IS" firstAttribute="top" secondItem="Qic-jS-YEF" secondAttribute="bottom" constant="25" id="vqm-pj-aCA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="4p1-AM-UBW"/>
                 </viewController>
@@ -218,8 +238,48 @@
                     <view key="view" contentMode="scaleToFill" id="mLK-KS-e6K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zu-qy-SRr">
+                                <rect key="frame" x="133.5" y="44" width="147.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LV-kj-CMk">
+                                <rect key="frame" x="186" y="128" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJp-bj-NyW">
+                                <rect key="frame" x="75" y="732" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8K-SZ-BLV">
+                                <rect key="frame" x="275" y="732" width="64" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pause"/>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1500" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYH-Jq-PLg">
+                                <rect key="frame" x="0.0" y="174" width="414" height="216"/>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OLS-0G-Bbf"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" name="DarkDayNight"/>
+                        <constraints>
+                            <constraint firstItem="OLS-0G-Bbf" firstAttribute="bottom" secondItem="Q8K-SZ-BLV" secondAttribute="bottom" constant="50" id="0a2-v9-G4k"/>
+                            <constraint firstItem="PJp-bj-NyW" firstAttribute="leading" secondItem="OLS-0G-Bbf" secondAttribute="leading" constant="75" id="0qs-GC-UZ2"/>
+                            <constraint firstItem="gYH-Jq-PLg" firstAttribute="leading" secondItem="OLS-0G-Bbf" secondAttribute="leading" id="Epp-CH-ART"/>
+                            <constraint firstItem="gYH-Jq-PLg" firstAttribute="top" secondItem="7LV-kj-CMk" secondAttribute="bottom" constant="25" id="FB4-ro-8Oh"/>
+                            <constraint firstItem="7LV-kj-CMk" firstAttribute="top" secondItem="4Zu-qy-SRr" secondAttribute="bottom" constant="48" id="Peg-8y-ICY"/>
+                            <constraint firstItem="gYH-Jq-PLg" firstAttribute="trailing" secondItem="OLS-0G-Bbf" secondAttribute="trailing" id="TF3-Xq-Te7"/>
+                            <constraint firstItem="4Zu-qy-SRr" firstAttribute="centerX" secondItem="mLK-KS-e6K" secondAttribute="centerX" id="Vbg-qj-U30"/>
+                            <constraint firstItem="4Zu-qy-SRr" firstAttribute="top" secondItem="OLS-0G-Bbf" secondAttribute="top" id="eNn-l4-3ld"/>
+                            <constraint firstItem="7LV-kj-CMk" firstAttribute="centerX" secondItem="mLK-KS-e6K" secondAttribute="centerX" id="i3Q-AM-YPJ"/>
+                            <constraint firstItem="OLS-0G-Bbf" firstAttribute="bottom" secondItem="PJp-bj-NyW" secondAttribute="bottom" constant="50" id="qP2-5e-CYZ"/>
+                            <constraint firstItem="OLS-0G-Bbf" firstAttribute="trailing" secondItem="Q8K-SZ-BLV" secondAttribute="trailing" constant="75" id="xyF-7A-o0c"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" id="qkC-6m-Cs2"/>
                 </viewController>
@@ -288,19 +348,13 @@
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="DarkDayNight">
-            <color red="0.67770189049999996" green="0.76088094709999998" blue="0.66342109439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.67799997329711914" green="0.76099997758865356" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lightDayNight">
-            <color red="0.82796305420000005" green="0.89493054149999995" blue="0.80430114269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.82800000905990601" green="0.89499998092651367" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

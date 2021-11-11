@@ -14,6 +14,7 @@
 		CC77DF8827247B25007BB013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC77DF8727247B25007BB013 /* Assets.xcassets */; };
 		CC77DF8B27247B25007BB013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC77DF8927247B25007BB013 /* LaunchScreen.storyboard */; };
 		CC8CEF05273CBAC30066C125 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */; };
+		CC8CEF07273CD51B0066C125 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CEF06273CD51B0066C125 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CC77DF8A27247B25007BB013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC77DF8C27247B25007BB013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		CC8CEF06273CD51B0066C125 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				CC77DF8227247B24007BB013 /* ToDoListViewController.swift */,
 				CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */,
+				CC8CEF06273CD51B0066C125 /* TimerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8CEF07273CD51B0066C125 /* TimerViewController.swift in Sources */,
 				CC77DF8327247B24007BB013 /* ToDoListViewController.swift in Sources */,
 				CC8CEF05273CBAC30066C125 /* AddItemViewController.swift in Sources */,
 				CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */,
