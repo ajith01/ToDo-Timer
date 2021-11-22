@@ -47,34 +47,22 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="kMO-5Q-zZ0"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bb7-xa-f1A">
-                                    <size key="itemSize" width="98" height="57"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bb7-xa-f1A">
+                                    <size key="itemSize" width="126" height="56.5"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionToDoLists" id="vE6-OE-IYd">
-                                        <rect key="frame" x="0.0" y="-0.5" width="98" height="57"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionToDoLists" id="vE6-OE-IYd" customClass="ToDoListsNameCellCollectionViewCell" customModule="ToDo_Timer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-0.5" width="126" height="56.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Nie-mC-Wa4">
-                                            <rect key="frame" x="0.0" y="0.0" width="98" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="126" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sB-R3-pVe">
-                                                    <rect key="frame" x="16" y="13" width="67" height="31"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                </button>
-                                            </subviews>
                                             <color key="backgroundColor" name="DarkDayNight"/>
-                                            <constraints>
-                                                <constraint firstItem="6sB-R3-pVe" firstAttribute="centerY" secondItem="Nie-mC-Wa4" secondAttribute="centerY" id="AqX-0q-tfJ"/>
-                                                <constraint firstItem="6sB-R3-pVe" firstAttribute="centerX" secondItem="Nie-mC-Wa4" secondAttribute="centerX" id="VfK-Wg-nEk"/>
-                                                <constraint firstItem="6sB-R3-pVe" firstAttribute="leading" secondItem="Nie-mC-Wa4" secondAttribute="leading" constant="16" id="vzM-i8-ywQ"/>
-                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="98" height="57"/>
+                                        <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
