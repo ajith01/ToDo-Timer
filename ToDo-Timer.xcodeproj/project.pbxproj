@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC2B1CCE274C449700B248DE /* LabelCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B1CCD274C449700B248DE /* LabelCollectionView.swift */; };
+		CC2B1CD1274C4A6800B248DE /* CustomToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B1CCF274C4A6800B248DE /* CustomToDoListCell.swift */; };
+		CC2B1CD2274C4A6800B248DE /* CustomToDoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2B1CD0274C4A6800B248DE /* CustomToDoListCell.xib */; };
 		CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF7E27247B24007BB013 /* AppDelegate.swift */; };
 		CC77DF8127247B24007BB013 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF8027247B24007BB013 /* SceneDelegate.swift */; };
 		CC77DF8327247B24007BB013 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF8227247B24007BB013 /* ToDoListViewController.swift */; };
@@ -15,13 +18,14 @@
 		CC77DF8B27247B25007BB013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC77DF8927247B25007BB013 /* LaunchScreen.storyboard */; };
 		CC783FF8274B5E8000ED6722 /* ToDoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC783FF7274B5E8000ED6722 /* ToDoListItem.swift */; };
 		CC783FFB274B620B00ED6722 /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC783FFA274B620B00ED6722 /* ToDoList.swift */; };
-		CC783FFE274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC783FFC274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.swift */; };
-		CC783FFF274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC783FFD274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.xib */; };
 		CC8CEF05273CBAC30066C125 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */; };
 		CC8CEF07273CD51B0066C125 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CEF06273CD51B0066C125 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC2B1CCD274C449700B248DE /* LabelCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionView.swift; sourceTree = "<group>"; };
+		CC2B1CCF274C4A6800B248DE /* CustomToDoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToDoListCell.swift; sourceTree = "<group>"; };
+		CC2B1CD0274C4A6800B248DE /* CustomToDoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomToDoListCell.xib; sourceTree = "<group>"; };
 		CC77DF7B27247B24007BB013 /* ToDo-Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC77DF7E27247B24007BB013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC77DF8027247B24007BB013 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,8 +36,6 @@
 		CC77DF8C27247B25007BB013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC783FF7274B5E8000ED6722 /* ToDoListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItem.swift; sourceTree = "<group>"; };
 		CC783FFA274B620B00ED6722 /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
-		CC783FFC274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListsNameCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		CC783FFD274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoListsNameCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		CC8CEF06273CD51B0066C125 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +86,8 @@
 			children = (
 				CC783FF7274B5E8000ED6722 /* ToDoListItem.swift */,
 				CC783FFA274B620B00ED6722 /* ToDoList.swift */,
-				CC783FFC274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.swift */,
+				CC2B1CCD274C449700B248DE /* LabelCollectionView.swift */,
+				CC2B1CCF274C4A6800B248DE /* CustomToDoListCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,7 +107,7 @@
 			children = (
 				CC77DF8427247B24007BB013 /* Main.storyboard */,
 				CC77DF8927247B25007BB013 /* LaunchScreen.storyboard */,
-				CC783FFD274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.xib */,
+				CC2B1CD0274C4A6800B248DE /* CustomToDoListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,8 +170,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2B1CD2274C4A6800B248DE /* CustomToDoListCell.xib in Resources */,
 				CC77DF8B27247B25007BB013 /* LaunchScreen.storyboard in Resources */,
-				CC783FFF274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.xib in Resources */,
 				CC77DF8827247B25007BB013 /* Assets.xcassets in Resources */,
 				CC77DF8627247B24007BB013 /* Main.storyboard in Resources */,
 			);
@@ -182,13 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC8CEF07273CD51B0066C125 /* TimerViewController.swift in Sources */,
-				CC783FFE274B6A7900ED6722 /* ToDoListsNameCellCollectionViewCell.swift in Sources */,
 				CC783FF8274B5E8000ED6722 /* ToDoListItem.swift in Sources */,
 				CC77DF8327247B24007BB013 /* ToDoListViewController.swift in Sources */,
 				CC783FFB274B620B00ED6722 /* ToDoList.swift in Sources */,
+				CC2B1CCE274C449700B248DE /* LabelCollectionView.swift in Sources */,
 				CC8CEF05273CBAC30066C125 /* AddItemViewController.swift in Sources */,
 				CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */,
 				CC77DF8127247B24007BB013 /* SceneDelegate.swift in Sources */,
+				CC2B1CD1274C4A6800B248DE /* CustomToDoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 import Foundation
 struct ToDoList {
     var name:String = "test"
-    var toDoList = [ToDoListItem]()  //array of ToDoListItems
+    var toDoListHolder = [ToDoListItem]()  //array of ToDoListItems
     
     init(name:String){
         //TO:DO need to figure out a way to add an arry
