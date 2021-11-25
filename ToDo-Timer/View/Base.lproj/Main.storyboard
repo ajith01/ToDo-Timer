@@ -62,7 +62,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX5-eO-Enk">
-                                                    <rect key="frame" x="42" y="18" width="42" height="21"/>
+                                                    <rect key="frame" x="42.5" y="18" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -87,14 +87,77 @@
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexColor" name="DarkDayNight"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoItemCell" id="rsi-bF-kJc" customClass="CustomToDoListCell" customModule="ToDo_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoItemCell" rowHeight="100" id="rsi-bF-kJc" customClass="FunctionalTableViewCell" customModule="ToDo_Timer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rsi-bF-kJc" id="lob-EV-rtX" customClass="CustomToDoListCell" customModule="ToDo_Timer" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rsi-bF-kJc" id="lob-EV-rtX" customClass="FunctionalTableViewCell" customModule="ToDo_Timer" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="qpc-6C-KJP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sGI-Xn-fMF">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="100"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLv-dH-WSO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7A-LY-Bdf">
+                                                                    <rect key="frame" x="0.0" y="29" width="45" height="71"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KpH-jh-dXJ">
+                                                            <rect key="frame" x="135" y="0.0" width="51" height="100"/>
+                                                        </switch>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J0E-lD-JKu">
+                                                            <rect key="frame" x="274" y="0.0" width="140" height="100"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tp4-9x-DaW">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="70" id="nkz-lt-vbq"/>
+                                                                    </constraints>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="tinted" title="Delete"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HP-Oy-srz">
+                                                                    <rect key="frame" x="75" y="0.0" width="65" height="100"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="65" id="oxC-xy-IaY"/>
+                                                                    </constraints>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="tinted" title="Timer"/>
+                                                                    <connections>
+                                                                        <segue destination="wAK-OM-qHS" kind="show" id="QBo-48-W8w"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.73333333329999995" green="0.50196078430000002" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </stackView>
+                                            </subviews>
                                             <color key="backgroundColor" name="lightDayNight"/>
+                                            <constraints>
+                                                <constraint firstItem="qpc-6C-KJP" firstAttribute="leading" secondItem="lob-EV-rtX" secondAttribute="leading" id="J4X-Rg-Tjh"/>
+                                                <constraint firstItem="qpc-6C-KJP" firstAttribute="top" secondItem="lob-EV-rtX" secondAttribute="top" id="LIz-06-rC2"/>
+                                                <constraint firstAttribute="bottom" secondItem="qpc-6C-KJP" secondAttribute="bottom" id="cPG-Bb-Q4q"/>
+                                                <constraint firstAttribute="trailing" secondItem="qpc-6C-KJP" secondAttribute="trailing" id="e69-33-wjz"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="taskDate" destination="x7A-LY-Bdf" id="kR0-Z0-4Gf"/>
+                                            <outlet property="taskDone" destination="KpH-jh-dXJ" id="Mvt-sj-Wal"/>
+                                            <outlet property="taskName" destination="VLv-dH-WSO" id="86d-Bv-d7F"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -348,6 +411,9 @@
             <point key="canvasLocation" x="286.95652173913044" y="-364.28571428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QBo-48-W8w"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="DarkDayNight">

@@ -25,7 +25,7 @@ class ToDoListViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        toDoTableView.register(UINib(nibName: "CustomToDoListCell", bundle: nil), forCellReuseIdentifier: "ToDoItemCell")
+//        toDoTableView.register(UINib(nibName: "CustomToDoListCell", bundle: nil), forCellReuseIdentifier: "ToDoItemCell")
         
         toDoTableView.dataSource = self
         toDoTableView.delegate = self
@@ -73,7 +73,7 @@ extension ToDoListViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath) as! CustomToDoListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath) as! FunctionalTableViewCell
         
         cell.taskName.text = toDoLists[currentToDoList].toDoListHolder[indexPath.row].taskName
         cell.taskDate.text = dateFormatter.string(from:toDoLists[currentToDoList].toDoListHolder[indexPath.row].date!)

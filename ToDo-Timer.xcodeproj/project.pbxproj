@@ -10,6 +10,7 @@
 		CC2B1CCE274C449700B248DE /* LabelCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B1CCD274C449700B248DE /* LabelCollectionView.swift */; };
 		CC2B1CD1274C4A6800B248DE /* CustomToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B1CCF274C4A6800B248DE /* CustomToDoListCell.swift */; };
 		CC2B1CD2274C4A6800B248DE /* CustomToDoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2B1CD0274C4A6800B248DE /* CustomToDoListCell.xib */; };
+		CC759546274F597C00A188B5 /* FunctionalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC759545274F597C00A188B5 /* FunctionalTableViewCell.swift */; };
 		CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF7E27247B24007BB013 /* AppDelegate.swift */; };
 		CC77DF8127247B24007BB013 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF8027247B24007BB013 /* SceneDelegate.swift */; };
 		CC77DF8327247B24007BB013 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF8227247B24007BB013 /* ToDoListViewController.swift */; };
@@ -26,6 +27,7 @@
 		CC2B1CCD274C449700B248DE /* LabelCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionView.swift; sourceTree = "<group>"; };
 		CC2B1CCF274C4A6800B248DE /* CustomToDoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToDoListCell.swift; sourceTree = "<group>"; };
 		CC2B1CD0274C4A6800B248DE /* CustomToDoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomToDoListCell.xib; sourceTree = "<group>"; };
+		CC759545274F597C00A188B5 /* FunctionalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalTableViewCell.swift; sourceTree = "<group>"; };
 		CC77DF7B27247B24007BB013 /* ToDo-Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC77DF7E27247B24007BB013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC77DF8027247B24007BB013 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				CC77DF8227247B24007BB013 /* ToDoListViewController.swift */,
 				CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */,
 				CC8CEF06273CD51B0066C125 /* TimerViewController.swift */,
+				CC759545274F597C00A188B5 /* FunctionalTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				CC8CEF05273CBAC30066C125 /* AddItemViewController.swift in Sources */,
 				CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */,
 				CC77DF8127247B24007BB013 /* SceneDelegate.swift in Sources */,
+				CC759546274F597C00A188B5 /* FunctionalTableViewCell.swift in Sources */,
 				CC2B1CD1274C4A6800B248DE /* CustomToDoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
