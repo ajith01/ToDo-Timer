@@ -22,5 +22,7 @@ class FunctionalTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+//    @IBAction func taskStatusChange(_ sender:UISwitch){
+///}
 }

@@ -23,9 +23,10 @@ struct ToDoListItem{
     }
 }
 
-enum Importance {
-case low
-case medium
-case high
-case veryImportant
+enum Importance:Int {
+case low = 1
+case medium = 2
+case high = 3
+case veryImportant = 4
+    
 }

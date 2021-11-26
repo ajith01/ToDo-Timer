@@ -48,10 +48,10 @@ class ToDoListViewController: UIViewController {
         //adding to do list items
         
         toDoLists[0].toDoListHolder.append(ToDoListItem(taskName: "Task 1", taskImportance: Importance.low, date: Date.now))
-        toDoLists[0].toDoListHolder.append(ToDoListItem(taskName: "Task 2", taskImportance: Importance.low, date: Date.now))
+        toDoLists[0].toDoListHolder.append(ToDoListItem(taskName: "Task 2", taskImportance: Importance.low, date: Date.now,complete: true))
         toDoLists[1].toDoListHolder.append(ToDoListItem(taskName: "Task 3", taskImportance: Importance.low, date: Date.now))
         toDoLists[2].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now))
-        toDoLists[2].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now))
+        toDoLists[2].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now, complete: true))
         toDoLists[3].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now))
 
 
@@ -62,9 +62,70 @@ class ToDoListViewController: UIViewController {
     }
 
     @IBAction func addButtonPressed(_ sender: Any) {
-        print("Button Pressed")
+        let vc = AddItemViewController()
+        vc.currentToDoList = currentToDoList
+        navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func deleteButtonPressed(_ sender:UIButton){
+        let pointer = sender.convert(CGPoint.zero, to: toDoTableView)
+        guard let indexpath = toDoTableView.indexPathForRow(at: pointer) else {return}
+        toDoLists[currentToDoList].toDoListHolder.remove(at:indexpath.row)
+        
+        toDoTableView.beginUpdates()
+        toDoTableView.deleteRows(at: [IndexPath(row: indexpath.row, section: 0)], with: .right)
+        
+        toDoTableView.endUpdates()
+    }
+    
+    @IBAction func taskCompletionChanged(_ sender:UISwitch){
+        let pointer = sender.convert(CGPoint.zero, to: toDoTableView)
+        guard let indexpath = toDoTableView.indexPathForRow(at: pointer) else {return}
+        toDoLists[currentToDoList].toDoListHolder[indexpath.row].complete = true
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AddItemViewController{
+            let vc = segue.destination as? AddItemViewController
+            vc?.todoViewController = self
+//            vc?.currentToDoList = currentToDoList
+            
+        }
+    }
+    
+    func addItemToToDoList(task:String,taskImpe:Importance, taskdate:Date){
+        toDoLists[currentToDoList].toDoListHolder.append(ToDoListItem(taskName: task , taskImportance:taskImpe ,date:taskdate ))
+        toDoTableView.reloadData()
+    }
+    
+    @IBAction func addToDoList(_ sender: UIButton) {
+        print("Button Pressed")
+        
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Create a new todo list", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add a ToDo List", style: .default){
+            (action) in
+            let toDoList = ToDoList(name: textField.text!)
+            
+            self.toDoLists.append(toDoList)
+            self.toDoCollectionView.reloadData()
+            self.toDoCollectionView.scrollToItem(at: IndexPath(row: self.toDoLists.count-1, section: 0), at: .left, animated: true)
+            self.currentToDoList = self.toDoLists.count-1
+            self.toDoTableView.reloadData()
+        }
+        
+        alert.addTextField{(alertTextField) in alertTextField.placeholder = "Create new Item"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert,animated: true,completion: nil)
+        
+    }
+    
+
 }
 
 extension ToDoListViewController:UITableViewDataSource{
@@ -77,6 +138,8 @@ extension ToDoListViewController:UITableViewDataSource{
         
         cell.taskName.text = toDoLists[currentToDoList].toDoListHolder[indexPath.row].taskName
         cell.taskDate.text = dateFormatter.string(from:toDoLists[currentToDoList].toDoListHolder[indexPath.row].date!)
+        
+        cell.taskDone.setOn(toDoLists[currentToDoList].toDoListHolder[indexPath.row].complete, animated: true)
         
         return cell
     }
