@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253479F5275111A600725A56 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253479F4275111A600725A56 /* SettingsViewController.swift */; };
+		257ACCBE27552180008FE05A /* AccSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257ACCBD27552180008FE05A /* AccSettingsViewController.swift */; };
+		257ACCC027552253008FE05A /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257ACCBF27552253008FE05A /* ThemeViewController.swift */; };
 		CC2B1CCE274C449700B248DE /* LabelCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B1CCD274C449700B248DE /* LabelCollectionView.swift */; };
 		CC759546274F597C00A188B5 /* FunctionalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC759545274F597C00A188B5 /* FunctionalTableViewCell.swift */; };
 		CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77DF7E27247B24007BB013 /* AppDelegate.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		253479F4275111A600725A56 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		257ACCBD27552180008FE05A /* AccSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccSettingsViewController.swift; sourceTree = "<group>"; };
+		257ACCBF27552253008FE05A /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		CC2B1CCD274C449700B248DE /* LabelCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionView.swift; sourceTree = "<group>"; };
 		CC759545274F597C00A188B5 /* FunctionalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalTableViewCell.swift; sourceTree = "<group>"; };
 		CC77DF7B27247B24007BB013 /* ToDo-Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +100,9 @@
 			children = (
 				CC77DF8227247B24007BB013 /* ToDoListViewController.swift */,
 				CC8CEF04273CBAC30066C125 /* AddItemViewController.swift */,
+				257ACCBF27552253008FE05A /* ThemeViewController.swift */,
+				253479F4275111A600725A56 /* SettingsViewController.swift */,
+				257ACCBD27552180008FE05A /* AccSettingsViewController.swift */,
 				CC8CEF06273CD51B0066C125 /* TimerViewController.swift */,
 				CC759545274F597C00A188B5 /* FunctionalTableViewCell.swift */,
 			);
@@ -181,9 +190,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC8CEF07273CD51B0066C125 /* TimerViewController.swift in Sources */,
+				257ACCBE27552180008FE05A /* AccSettingsViewController.swift in Sources */,
 				CC783FF8274B5E8000ED6722 /* ToDoListItem.swift in Sources */,
 				CC77DF8327247B24007BB013 /* ToDoListViewController.swift in Sources */,
+				253479F5275111A600725A56 /* SettingsViewController.swift in Sources */,
 				CC783FFB274B620B00ED6722 /* ToDoList.swift in Sources */,
+				257ACCC027552253008FE05A /* ThemeViewController.swift in Sources */,
 				CC2B1CCE274C449700B248DE /* LabelCollectionView.swift in Sources */,
 				CC8CEF05273CBAC30066C125 /* AddItemViewController.swift in Sources */,
 				CC77DF7F27247B24007BB013 /* AppDelegate.swift in Sources */,
