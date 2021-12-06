@@ -19,14 +19,15 @@ class ToDoListViewController: UIViewController {
     var currentToDoList = 0 //indicates which ToDo list item is selected
     
     let dateFormatter = DateFormatter()
-
     
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("ToDoLists.plist")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        toDoTableView.register(UINib(nibName: "CustomToDoListCell", bundle: nil), forCellReuseIdentifier: "ToDoItemCell")
-        
+        toDoLists.append(ToDoList(name: "Daily"))
+
         toDoTableView.dataSource = self
         toDoTableView.delegate = self
         
@@ -37,34 +38,38 @@ class ToDoListViewController: UIViewController {
         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         
-        //going to hard code some todo lists
-        toDoLists.append(ToDoList(name: "Daily"))
-        toDoLists.append(ToDoList(name: "Weekly"))
-        toDoLists.append(ToDoList(name: "Monthly"))
-        toDoLists.append(ToDoList(name: "Project 1"))
-        toDoLists.append(ToDoList(name: "Project 2"))
-        
-        
-        //adding to do list items
-        
-        toDoLists[0].toDoListHolder.append(ToDoListItem(taskName: "Task 1", taskImportance: Importance.low, date: Date.now))
-        toDoLists[0].toDoListHolder.append(ToDoListItem(taskName: "Task 2", taskImportance: Importance.low, date: Date.now,complete: true))
-        toDoLists[1].toDoListHolder.append(ToDoListItem(taskName: "Task 3", taskImportance: Importance.low, date: Date.now))
-        toDoLists[2].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now))
-        toDoLists[2].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now, complete: true))
-        toDoLists[3].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now))
-
-
+        loadItem()
         toDoCollectionView.reloadData()
-        
-
-
     }
 
     @IBAction func addButtonPressed(_ sender: Any) {
         let vc = AddItemViewController()
         vc.currentToDoList = currentToDoList
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func deleteEntireList(_ sender: UIButton ){
+        
+        if toDoLists.count > 1 {
+        toDoCollectionView.deleteItems(at: [IndexPath(row: currentToDoList, section: 0)])
+        
+        toDoLists.remove(at: currentToDoList)
+        currentToDoList = 0
+        toDoCollectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: true)
+        saveItems()
+            
+        } else {
+            
+            let alert = UIAlertController(title: "Atleast 1 todo list required", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "You need atleast 1 to do list", style: .default){
+                (action) in
+                
+            }
+            alert.addAction(action)
+            
+            present(alert,animated: true,completion: nil)
+                
+            }
     }
     
     @IBAction func deleteButtonPressed(_ sender:UIButton){
@@ -74,14 +79,15 @@ class ToDoListViewController: UIViewController {
         
         toDoTableView.beginUpdates()
         toDoTableView.deleteRows(at: [IndexPath(row: indexpath.row, section: 0)], with: .right)
-        
         toDoTableView.endUpdates()
+        saveItems()
     }
     
     @IBAction func taskCompletionChanged(_ sender:UISwitch){
         let pointer = sender.convert(CGPoint.zero, to: toDoTableView)
         guard let indexpath = toDoTableView.indexPathForRow(at: pointer) else {return}
-        toDoLists[currentToDoList].toDoListHolder[indexpath.row].complete = true
+        toDoLists[currentToDoList].toDoListHolder[indexpath.row].complete = !toDoLists[currentToDoList].toDoListHolder[indexpath.row].complete
+        saveItems()
 
     }
     
@@ -94,13 +100,12 @@ class ToDoListViewController: UIViewController {
         }
     }
     
-    func addItemToToDoList(task:String,taskImpe:Importance, taskdate:Date){
+    func addItemToToDoList(task:String,taskImpe:Int?, taskdate:Date){
         toDoLists[currentToDoList].toDoListHolder.append(ToDoListItem(taskName: task , taskImportance:taskImpe ,date:taskdate ))
-        toDoTableView.reloadData()
+        saveItems()
     }
     
     @IBAction func addToDoList(_ sender: UIButton) {
-        print("Button Pressed")
         
         var textField = UITextField()
         let alert = UIAlertController(title: "Create a new todo list", message: "", preferredStyle: .alert)
@@ -112,7 +117,8 @@ class ToDoListViewController: UIViewController {
             self.toDoCollectionView.reloadData()
             self.toDoCollectionView.scrollToItem(at: IndexPath(row: self.toDoLists.count-1, section: 0), at: .left, animated: true)
             self.currentToDoList = self.toDoLists.count-1
-            self.toDoTableView.reloadData()
+            self.saveItems()
+
         }
         
         alert.addTextField{(alertTextField) in alertTextField.placeholder = "Create new Item"
@@ -123,6 +129,36 @@ class ToDoListViewController: UIViewController {
         
         present(alert,animated: true,completion: nil)
         
+    }
+    
+    func saveItems(){
+        let encoder = PropertyListEncoder()
+        
+        do {
+            let data = try encoder.encode(toDoLists)
+            try data.write(to:dataFilePath!)
+        }catch{
+            
+        }
+        print("Error Encoding")
+        
+        self.toDoCollectionView.reloadData()
+        self.toDoTableView.reloadData()
+    }
+    
+    func loadItem(){
+        if let data = try? Data(contentsOf: dataFilePath!){
+            let decoder = PropertyListDecoder()
+
+            do{
+                toDoLists = try decoder.decode([ToDoList].self, from: data)
+            } catch{
+                print("Error decoding todolists")
+            }
+            toDoCollectionView.reloadData()
+            toDoTableView.reloadData()
+
+        }
     }
     
 
@@ -178,6 +214,7 @@ extension ToDoListViewController:UICollectionViewDelegate{
         collectionView.deselectItem(at: indexPath, animated: true)
         currentToDoList = indexPath.row
         toDoTableView.reloadData()
+        
         
     }
 }

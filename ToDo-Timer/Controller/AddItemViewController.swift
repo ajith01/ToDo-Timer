@@ -28,7 +28,7 @@ class AddItemViewController: UIViewController {
         //TO:DO deal with optionals
         
         
-        todoViewController?.addItemToToDoList( task: taskNameField.text!,taskImpe: Importance(rawValue: importancePicker.selectedSegmentIndex)!, taskdate: datePicker.date)
+        todoViewController?.addItemToToDoList( task: taskNameField.text!,taskImpe: importancePicker.selectedSegmentIndex, taskdate: datePicker.date)
         
         navigationController?.popViewController(animated: true)
         //        viewControler.toDoLists[viewControler.currentToDoList].toDoListHolder.append(ToDoListItem(taskName: taskNameField.text, taskImportance:Importance(rawValue: importancePicker.selectedSegmentIndex),date: datePicker.date))

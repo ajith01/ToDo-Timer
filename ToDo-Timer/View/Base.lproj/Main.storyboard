@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b6Y-88-7el">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b6Y-88-7el">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -195,13 +195,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOM-yP-vfL">
-                                <rect key="frame" x="10" y="44" width="394" height="46"/>
+                                <rect key="frame" x="10" y="44" width="394" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cnv-Dw-CjC">
-                                <rect key="frame" x="0.0" y="105" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="56"/>
                                 <color key="backgroundColor" name="DarkDayNight"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="kMO-5Q-zZ0"/>
@@ -242,7 +242,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2dP-Dn-aAL">
-                                <rect key="frame" x="0.0" y="161" width="414" height="654"/>
+                                <rect key="frame" x="0.0" y="151" width="414" height="664"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexColor" name="DarkDayNight"/>
                                 <prototypes>
@@ -345,32 +345,44 @@
                                     <segue destination="wAK-OM-qHS" kind="show" id="Nbs-d0-Cnf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAI-ZX-bQq">
-                                <rect key="frame" x="347.5" y="69" width="41.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
-                                <connections>
-                                    <action selector="addToDoList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awz-7k-Pqd"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwt-Zv-XbZ">
+                                <rect key="frame" x="316" y="59" width="83" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-9K-iw0">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system"/>
+                                        <connections>
+                                            <action selector="deleteEntireList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwO-AZ-5av"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAI-ZX-bQq">
+                                        <rect key="frame" x="41.5" y="0.0" width="41.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                        <connections>
+                                            <action selector="addToDoList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awz-7k-Pqd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="DarkDayNight"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OAI-ZX-bQq" secondAttribute="trailing" constant="25" id="0ua-SQ-ZkM"/>
                             <constraint firstItem="Cnv-Dw-CjC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Ri-9V-oBn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2dP-Dn-aAL" secondAttribute="trailing" id="5Ap-fh-BBS"/>
-                            <constraint firstItem="OAI-ZX-bQq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="8sj-XF-WMt"/>
                             <constraint firstItem="Cnv-Dw-CjC" firstAttribute="top" secondItem="IOM-yP-vfL" secondAttribute="bottom" constant="15" id="CTi-Uc-ypi"/>
                             <constraint firstItem="IOM-yP-vfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="IfQ-aw-bKG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cnv-Dw-CjC" secondAttribute="trailing" id="KHi-6N-3H6"/>
+                            <constraint firstItem="Nwt-Zv-XbZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="LfU-tc-cBG"/>
                             <constraint firstItem="TgG-i8-1NI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M0S-H8-yKK"/>
                             <constraint firstItem="2dP-Dn-aAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WOk-8W-k8C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IOM-yP-vfL" secondAttribute="trailing" constant="10" id="e14-iR-6Nh"/>
                             <constraint firstItem="IOM-yP-vfL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eOX-DZ-V67"/>
-                            <constraint firstItem="Cnv-Dw-CjC" firstAttribute="top" secondItem="OAI-ZX-bQq" secondAttribute="bottom" constant="5" id="isx-hF-iMM"/>
                             <constraint firstItem="2dP-Dn-aAL" firstAttribute="top" secondItem="Cnv-Dw-CjC" secondAttribute="bottom" id="kfg-t6-PGK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TgG-i8-1NI" secondAttribute="bottom" constant="15" id="kmr-Af-oF3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nwt-Zv-XbZ" secondAttribute="trailing" constant="15" id="mWf-Th-MUD"/>
                             <constraint firstItem="2dP-Dn-aAL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="meH-Fb-QGk"/>
                             <constraint firstItem="TgG-i8-1NI" firstAttribute="top" secondItem="2dP-Dn-aAL" secondAttribute="bottom" constant="10" id="roN-zC-pE9"/>
                             <constraint firstItem="Cnv-Dw-CjC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ugf-oM-d5D"/>
@@ -630,6 +642,7 @@
         <segue reference="P4T-ku-EKI"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="DarkDayNight">
             <color red="0.67799997329711914" green="0.76099997758865356" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
