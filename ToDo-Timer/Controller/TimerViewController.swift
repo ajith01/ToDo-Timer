@@ -13,6 +13,8 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var taskName: UITextField!
     @IBOutlet weak var timer: UIDatePicker!
 
+    var currentToDoList = 0
+    var currToDoListName = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()

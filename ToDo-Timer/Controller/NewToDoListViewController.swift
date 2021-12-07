@@ -209,6 +209,7 @@ class NewToDoListViewController: UIViewController {
             print("Error in delete whole list")
         }
         
+        currentToDoList = 0
         getAllLists()
         getAllTasks()
     }
@@ -258,7 +259,9 @@ class NewToDoListViewController: UIViewController {
 
         sureAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
               print("Handle Ok logic here")
+            
                 self.deleteWholeListData()
+            
         }))
 
         sureAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
@@ -382,16 +385,20 @@ extension NewToDoListViewController:UITableViewDataSource{
                 let pred = NSPredicate(format: "listName CONTAINS '\(allTodoLists[currentToDoList].name!)'")
                 req.predicate = pred
                 let filtered = try context.fetch(req)
+                if(filtered == nil) {
+                    return [ToDoItem]()
+                }
                 return filtered
-                
             }
             else{
-                return []
+                return [ToDoItem]()
             }
         } catch {
             //
+            print("some ISsue ")
+            return [ToDoItem]()
         }
-        return []
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -402,6 +409,7 @@ extension NewToDoListViewController:UITableViewDataSource{
         cell.taskDate.text = dateFormatter.string(from: rem[indexPath.row].createdAt!)
         
         cell.taskDone.setOn(rem[indexPath.row].completed, animated: true)
+        print(rem[indexPath.row].importance)
         switch rem[indexPath.row].importance {
                 case 1:
             cell.backgroundColor = UIColor(red: lowC[0], green: lowC[1], blue: lowC[2], alpha: 1.0)
@@ -421,7 +429,7 @@ extension NewToDoListViewController:UITableViewDataSource{
 
 extension NewToDoListViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80

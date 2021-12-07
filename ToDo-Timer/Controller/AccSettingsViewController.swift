@@ -61,6 +61,7 @@ class AccSettingsViewController: UIViewController, UITextFieldDelegate {
         
         userDef.setValue(passField.text, forKey: "userpass")
         
+        navigationController?.popViewController(animated: true)
     }
     
 }
