@@ -242,6 +242,14 @@ class NewToDoListViewController: UIViewController {
 //        reloadTableView()
     }
     
+    @IBAction func TimerButtonPressed(_ sender: Any) {
+        let vc = TimerViewController()
+        vc.currentToDoList = currentToDoList
+        vc.currToDoListName = allTodoLists[currentToDoList].name!
+        navigationController?.pushViewController(vc, animated: true)
+//        reloadTableView()
+    }
+    
 
     @IBAction func deleteFullList(_ sender: Any) {
         

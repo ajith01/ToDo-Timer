@@ -370,35 +370,50 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgG-i8-1NI">
-                                <rect key="frame" x="161" y="816" width="92.5" height="31"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="+ New List">
-                                    <color key="titleColor" name="AccentColor"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="tinted" title="+ New List">
-                                    <color key="baseForegroundColor" name="AccentColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="addToDoList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FwV-iZ-dmj"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="lc7-ya-xSv">
+                                <rect key="frame" x="83.5" y="816" width="247" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgG-i8-1NI">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="PwS-Ju-zYd"/>
+                                            <constraint firstAttribute="height" constant="35" id="uke-Ma-vL8"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="+ New List">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="tinted" title="+ New List">
+                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addToDoList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FwV-iZ-dmj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhf-uZ-i0p">
+                                        <rect key="frame" x="127" y="0.0" width="120" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="pa1-RI-7I0"/>
+                                            <constraint firstAttribute="height" constant="35" id="tSg-LK-XHL"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="- Delete List"/>
+                                        <connections>
+                                            <action selector="deleteFullList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5g-VA-Ugi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Ipw-jd-b07"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAI-ZX-bQq">
                                 <rect key="frame" x="300" y="69" width="99" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="+ New Task"/>
                                 <connections>
                                     <segue destination="wAK-OM-qHS" kind="show" id="sto-qd-iut"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhf-uZ-i0p">
-                                <rect key="frame" x="20" y="110" width="160" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Delete Full List"/>
-                                <connections>
-                                    <action selector="deleteFullList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5g-VA-Ugi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -410,16 +425,16 @@
                             <constraint firstItem="Cnv-Dw-CjC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="8BX-ar-pGq"/>
                             <constraint firstItem="OAI-ZX-bQq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="8sj-XF-WMt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OAI-ZX-bQq" secondAttribute="trailing" constant="15" id="FB6-LT-GJe"/>
+                            <constraint firstItem="lc7-ya-xSv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jiz-Zt-sE1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cnv-Dw-CjC" secondAttribute="trailing" id="KHi-6N-3H6"/>
                             <constraint firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="LfU-tc-cBG"/>
-                            <constraint firstItem="TgG-i8-1NI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M0S-H8-yKK"/>
                             <constraint firstItem="2dP-Dn-aAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WOk-8W-k8C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lc7-ya-xSv" secondAttribute="bottom" constant="15" id="cny-Bh-Ljx"/>
                             <constraint firstItem="Cnv-Dw-CjC" firstAttribute="top" secondItem="OAI-ZX-bQq" secondAttribute="bottom" constant="5" id="isx-hF-iMM"/>
                             <constraint firstItem="2dP-Dn-aAL" firstAttribute="top" secondItem="Cnv-Dw-CjC" secondAttribute="bottom" id="kfg-t6-PGK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TgG-i8-1NI" secondAttribute="bottom" constant="15" id="kmr-Af-oF3"/>
                             <constraint firstItem="Cnv-Dw-CjC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="l13-uf-3mV"/>
                             <constraint firstItem="2dP-Dn-aAL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="meH-Fb-QGk"/>
-                            <constraint firstItem="TgG-i8-1NI" firstAttribute="top" secondItem="2dP-Dn-aAL" secondAttribute="bottom" constant="10" id="roN-zC-pE9"/>
+                            <constraint firstItem="lc7-ya-xSv" firstAttribute="top" secondItem="2dP-Dn-aAL" secondAttribute="bottom" constant="10" id="qik-RX-RoT"/>
                             <constraint firstItem="Cnv-Dw-CjC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ugf-oM-d5D"/>
                         </constraints>
                     </view>
@@ -541,7 +556,7 @@
         <!--Timer-->
         <scene sceneID="Flt-bx-ff6">
             <objects>
-                <viewController title="Timer" modalPresentationStyle="fullScreen" id="w7j-ts-IrU" sceneMemberID="viewController">
+                <viewController title="Timer" modalPresentationStyle="fullScreen" id="w7j-ts-IrU" customClass="TimerViewController" customModule="ToDo_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mLK-KS-e6K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -700,10 +715,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-
         <segue reference="sto-qd-iut"/>
         <segue reference="b0H-H2-gwq"/>
-
         <segue reference="P4T-ku-EKI"/>
     </inferredMetricsTieBreakers>
     <resources>

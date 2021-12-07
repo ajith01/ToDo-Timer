@@ -9,7 +9,11 @@ import Foundation
 import UIKit
 class TimerViewController: UIViewController {
     
-    
+    var todoViewController:NewToDoListViewController?
+    @IBOutlet weak var taskName: UITextField!
+    @IBOutlet weak var timer: UIDatePicker!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
