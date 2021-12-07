@@ -259,9 +259,7 @@ class NewToDoListViewController: UIViewController {
 
         sureAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
               print("Handle Ok logic here")
-            
                 self.deleteWholeListData()
-            
         }))
 
         sureAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
