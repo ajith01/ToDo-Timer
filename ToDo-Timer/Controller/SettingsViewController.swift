@@ -12,13 +12,23 @@ class SettingsViewController: UIViewController {
     @IBOutlet var settingsTable: UITableView!
     
     let settingsOptions = ["Accounts", "Theme"]
+    let userDef = UserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         settingsTable.delegate = self
         settingsTable.dataSource = self
+        
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if let val = userDef.value(forKey: "mainColor") as? Array<CGFloat> {
+            self.view.backgroundColor = UIColor(red: val[0], green: val[1], blue: val[2], alpha: 1.0)
+        } else {
+            print("error while loading main color")
+        }
+    }
+    
 
 }
 
@@ -33,6 +43,7 @@ extension SettingsViewController:UITableViewDataSource{
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Account", for: indexPath)
         cell.textLabel?.text = settingsOptions[indexPath.row]
 //        //"Set Acc Settings - txt set in settingVC file"

@@ -91,14 +91,14 @@ class ToDoListViewController: UIViewController {
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is AddItemViewController{
-            let vc = segue.destination as? AddItemViewController
-            vc?.todoViewController = self
-//            vc?.currentToDoList = currentToDoList
-            
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.destination is AddItemViewController{
+//            let vc = segue.destination as? AddItemViewController
+//            vc?.todoViewController = self
+////            vc?.currentToDoList = currentToDoList
+//
+//        }
+//    }
     
     func addItemToToDoList(task:String,taskImpe:Int?, taskdate:Date){
         toDoLists[currentToDoList].toDoListHolder.append(ToDoListItem(taskName: task , taskImportance:taskImpe ,date:taskdate ))
