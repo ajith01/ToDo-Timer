@@ -10,7 +10,6 @@ import UIKit
 
 class AccSettingsViewController: UIViewController, UITextFieldDelegate {
     
-//    @IBOutlet var settingsTable: UITableView!
     @IBOutlet var saveButton: UIButton!
     @IBOutlet weak var usrnmField: UITextField!
     
@@ -66,25 +65,3 @@ class AccSettingsViewController: UIViewController, UITextFieldDelegate {
     
 }
 
-//extension AccSettingsViewController:UITableViewDataSource{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 2
-//    }
-//
-////    func numberOfSections(in tableView: UITableView) -> Int {
-////        return 2
-////    }
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Account", for: indexPath)
-//
-////        cell.textLabel?.text = settingsOptions[indexPath.row]
-//        return cell
-//    }
-//}
-
-//extension AccSettingsViewController:UIViewDelegate{
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("clicked settings cell")
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-//}

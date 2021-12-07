@@ -62,18 +62,7 @@ class NewToDoListViewController: UIViewController {
         toDoLists.append(ToDoList(name: "Project 1"))
         toDoLists.append(ToDoList(name: "Project 2"))
         
-        
-        //adding to do list items
-        
-//        toDoLists[0].toDoListHolder.append(ToDoListItem(taskName: "Task 1", taskImportance: Importance.low, date: Date.now))
-//        toDoLists[0].toDoListHolder.append(ToDoListItem(taskName: "Task 2", taskImportance: Importance.low, date: Date.now,complete: true))
-//        toDoLists[1].toDoListHolder.append(ToDoListItem(taskName: "Task 3", taskImportance: Importance.low, date: Date.now))
-//        toDoLists[2].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now))
-//        toDoLists[2].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now, complete: true))
-//        toDoLists[3].toDoListHolder.append(ToDoListItem(taskName: "Task 4", taskImportance: Importance.low, date: Date.now))
 
-        
-//        toDoCollectionView.reloadData()
         
         getAllLists()
         getAllTasks()
@@ -383,9 +372,9 @@ extension NewToDoListViewController:UITableViewDataSource{
                 let pred = NSPredicate(format: "listName CONTAINS '\(allTodoLists[currentToDoList].name!)'")
                 req.predicate = pred
                 let filtered = try context.fetch(req)
-                if(filtered == nil) {
-                    return [ToDoItem]()
-                }
+//                if(filtered == nil) {
+//                    return [ToDoItem]()
+//                }
                 return filtered
             }
             else{
