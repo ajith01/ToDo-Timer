@@ -196,6 +196,22 @@ class NewToDoListViewController: UIViewController {
         
         getAllTasks()
     }
+    func deleteWholeListData() {
+        let rem = getMatching()
+        context.delete(allTodoLists[currentToDoList])
+        for x in rem {
+            context.delete(x)
+        }
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error in delete whole list")
+        }
+        
+        getAllLists()
+        getAllTasks()
+    }
     
     func updateTask(task: ToDoItem) {
         task.name = task.name ?? "Empty Name! +" + "got updated!"
@@ -226,6 +242,34 @@ class NewToDoListViewController: UIViewController {
 //        reloadTableView()
     }
     
+
+    @IBAction func deleteFullList(_ sender: Any) {
+        
+        if self.allTodoLists.count > 1 {
+        let sureAlert = UIAlertController(title: "Are You Sure", message: "All task will be removed", preferredStyle: UIAlertController.Style.alert)
+
+        sureAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+              print("Handle Ok logic here")
+                self.deleteWholeListData()
+        }))
+
+        sureAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+              print("Handle Cancel Logic here")
+        }))
+
+        present(sureAlert, animated: true, completion: nil)
+        } else {
+            
+            let alert = UIAlertController(title: "Cannot Remove", message: "At least 1 todo list Required", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (action: UIAlertAction!) in
+                print("skipped")
+          }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+        
+    }
     @IBAction func deleteButtonPressed(_ sender:UIButton){
         
         let pointer = sender.convert(CGPoint.zero, to: toDoTableView)

@@ -391,6 +391,16 @@
                                     <segue destination="wAK-OM-qHS" kind="show" id="sto-qd-iut"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhf-uZ-i0p">
+                                <rect key="frame" x="20" y="110" width="160" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Delete Full List"/>
+                                <connections>
+                                    <action selector="deleteFullList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5g-VA-Ugi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="DarkDayNight"/>
@@ -549,12 +559,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJp-bj-NyW">
-                                <rect key="frame" x="75" y="732" width="56" height="31"/>
+                                <rect key="frame" x="75" y="781" width="56" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8K-SZ-BLV">
-                                <rect key="frame" x="275" y="732" width="64" height="31"/>
+                                <rect key="frame" x="275" y="781" width="64" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Pause"/>
                             </button>
@@ -690,7 +700,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cpM-E2-EuT"/>
+
+        <segue reference="sto-qd-iut"/>
+        <segue reference="b0H-H2-gwq"/>
+
         <segue reference="P4T-ku-EKI"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -713,6 +726,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
